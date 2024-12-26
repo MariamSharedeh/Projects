@@ -1,0 +1,9 @@
+#faciliter la gestion de plusieurs conteneurs Docker
+version: '3'
+services: 
+  web :
+    bulid: .
+    ports: 
+      - "5000:5000"
+    volumes: 
+      - .:/app
