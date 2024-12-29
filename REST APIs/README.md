@@ -132,6 +132,15 @@ Si tu souhaites contribuer à ce projet, voici comment procéder :
 3. Fais tes modifications et commit-les (`git commit -am 'Ajout de ma fonctionnalité'`).
 4. Pousse tes modifications sur ton fork (`git push origin ma-fonctionnalite`).
 5. Ouvre une pull request pour que nous puissions examiner tes modifications.
+## Démonstration
+
+Pour voir un exemple de l'affichage de l'application, vous pouvez consulter ce fichier de démonstration :
+
+[Voir la démonstration sur Google Drive](https://drive.google.com/your-file-link)
+
+Vous pouvez aussi consulter des captures d'écran ci-dessous :
+![Capture d'écran de l'application](https://path-to-your-image-file.com)
+
 
 
 
