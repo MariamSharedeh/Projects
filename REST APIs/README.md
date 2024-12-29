@@ -74,9 +74,41 @@ Pour construire l'image Docker et exécuter le conteneur, utilisez les commandes
 ```bash
 docker build -t mon_api_flask .
 docker run -p 5000:5000 mon_api_flask
+
+```
+Ton application sera accessible à l'adresse `http://localhost:5000`.
+
+
+## Mise à jour de la base de données
+
+Lorsqu'il y a des changements dans la structure de la base de données (comme l'ajout ou la modification de modèles), il est important de faire une migration et une mise à jour de la base de données pour refléter ces changements.
+
+### Étapes pour effectuer une migration et une mise à jour :
+
+1. **Migrate** : Crée une migration basée sur les modifications de tes modèles.
+   ```bash
+   flask db migrate -m "Message de migration"
+   ```
+
+2. **Upgrade** : Applique la migration à la base de données.
+   ```bash
+   flask db upgrade
+   ```
+
+Cela permettra de mettre à jour la structure de la base de données en fonction des changements dans tes modèles sans perdre de données existantes.
+
+
+### Réinitialiser la base de données (facultatif) :
+
+Si tu veux repartir de zéro avec une nouvelle base de données (attention, cela effacera toutes les données), tu peux faire une réinitialisation de la base de données avec :
+
+```bash
+flask db downgrade
+flask db upgrade
 ```
 
-Ton application sera accessible à l'adresse `http://localhost:5000`.
+
+
 
 ## Exécution de l'Application
 
