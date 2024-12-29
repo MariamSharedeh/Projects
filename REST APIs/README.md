@@ -1,3 +1,4 @@
+
 # Build Professional REST APIs with Python, Flask, Docker, Flask-Smorest, and Flask-SQLAlchemy
 
 ## Description
@@ -18,28 +19,35 @@ Ce projet démontre la création d'une API RESTful professionnelle avec Flask, F
 - Flask-Smorest
 - Docker
 
-
 ## Installation
 
-1. **Créez un environnement virtuel Python** :
+### 1. Créez un environnement virtuel Python
 
-   Utilisez un environnement virtuel pour garder les dépendances du projet isolées.
+Utilisez un environnement virtuel pour garder les dépendances du projet isolées.
 
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # Sur Linux/MacOS
-   venv\Scripts\activate     # Sur Windows
+```bash
+python3 -m venv venv
+source venv/bin/activate  # Sur Linux/MacOS
+venv\Scripts\activate     # Sur Windows
+```
 
-2. **Installez les dépendances requises** :
+### 2. Installez les dépendances requises
 
 Installez Flask, Flask-Smorest, Flask-SQLAlchemy, Marshmallow, et d'autres dépendances nécessaires avec pip :
 
-   pip install flask flask-smorest flask-sqlalchemy marshmallow flask-migrate
+```bash
+pip install flask flask-smorest flask-sqlalchemy marshmallow flask-migrate
+```
 
-3. **Installez Docker :**
-4. **Créer un fichier Dockerfile :**
+### 3. Installez Docker
+
+Assurez-vous d'avoir Docker installé sur votre machine. Si ce n'est pas le cas, vous pouvez le télécharger et l'installer depuis [le site officiel de Docker](https://www.docker.com/get-started).
+
+### 4. Créer un fichier Dockerfile
 
 Le fichier Dockerfile permet de définir l'environnement dans lequel votre application sera exécutée. Exemple :
+
+```dockerfile
 # Utiliser l'image Python officielle comme base
 FROM python:3.12
 
@@ -57,25 +65,76 @@ EXPOSE 5000
 
 # Lancer l'application Flask
 CMD ["flask", "run", "--host", "0.0.0.0"]
+```
 
-5. **Construire et exécuter le projet avec Docker :**
+### 5. Construire et exécuter le projet avec Docker
 
-Pour construire l'image Docker et exécuter le conteneur, utilise les commandes suivantes :
-   **Exécution de l'Application Option 1**
- 1. Construire l'image Docker :
+Pour construire l'image Docker et exécuter le conteneur, utilisez les commandes suivantes :
+
+```bash
 docker build -t mon_api_flask .
- 2. Lancer le conteneur Docker :
 docker run -p 5000:5000 mon_api_flask
-Ton application sera accessible à l'adresse http://localhost:5000.
- ***Exécution via un éditeur (ex. : VS Code) Option 2***
-    source venv/bin/activate  # Sur Linux/MacOS
-    venv\Scripts\activate     # Sur Windows
-    flask run
+```
+
+Ton application sera accessible à l'adresse `http://localhost:5000`.
+
+## Exécution de l'Application
+
+### Option 1 : Utilisation de Docker Desktop
+
+1. **Construire l'image Docker** :
+
+   Dans le répertoire de ton projet, exécute cette commande pour créer l'image Docker :
+
+   ```bash
+   docker build -t mon_api_flask .
+   ```
+
+2. **Lancer le conteneur Docker** :
+
+   Ensuite, exécute le conteneur pour démarrer ton application Flask sur le port 5000 :
+
+   ```bash
+   docker run -p 5000:5000 mon_api_flask
+   ```
+
+   Ton application sera accessible à l'adresse `http://localhost:5000`.
+
+Si tu utilises **Docker Desktop**, tu peux également ouvrir l'interface graphique de Docker et gérer l'exécution de ton conteneur via l'interface.
+
+### Option 2 : Exécution via un éditeur (ex. : VS Code)
+
+1. **Activer l'environnement virtuel** :
+
+   Avant de lancer l'application, assure-toi que ton environnement virtuel est activé :
+
+   ```bash
+   source venv/bin/activate  # Sur Linux/MacOS
+   venv\Scripts\activate     # Sur Windows
+   ```
+
+2. **Lancer l'application Flask** :
+
+   Dans ton terminal, lance l'application Flask avec la commande suivante :
+
+   ```bash
+   flask run
+   ```
+
+   L'application sera alors accessible à l'adresse `http://localhost:5000`.
+
+## Contribuer
+
+Si tu souhaites contribuer à ce projet, voici comment procéder :
+
+1. Fork ce dépôt.
+2. Crée une branche pour ta fonctionnalité (`git checkout -b ma-fonctionnalite`).
+3. Fais tes modifications et commit-les (`git commit -am 'Ajout de ma fonctionnalité'`).
+4. Pousse tes modifications sur ton fork (`git push origin ma-fonctionnalite`).
+5. Ouvre une pull request pour que nous puissions examiner tes modifications.
 
 
 
+## Licence
 
-
-
-
-
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](./LICENSE) pour plus de détails.
