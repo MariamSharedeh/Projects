@@ -5,11 +5,6 @@
 
 Ce projet démontre la création d'une API RESTful professionnelle avec Flask, Flask-Smorest et Flask-SQLAlchemy. Il est conteneurisé à l'aide de Docker pour garantir une portabilité maximale. L'API permet de gérer des utilisateurs avec des fonctionnalités d'ajout et de consultation.
 
-## Fonctionnalités
-
-- Créer et consulter des utilisateurs via une API RESTful.
-- Authentification et gestion sécurisée des utilisateurs.
-- Intégration avec Docker pour une portabilité maximale.
 
 ## Technologies
 
