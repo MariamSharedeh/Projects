@@ -19,6 +19,8 @@ Ce projet démontre la création d'une API RESTful professionnelle avec Flask, F
 - Flask-Smorest
 - Docker
 
+
+
 ## Installation
 
 ### 1. Créez un environnement virtuel Python
@@ -169,6 +171,48 @@ Si tu souhaites contribuer à ce projet, voici comment procéder :
 Pour voir un exemple de l'affichage de l'application, vous pouvez consulter ce fichier de démonstration :
 
 [Voir la démonstration sur Google Drive](https://docs.google.com/document/d/1Xta3Nj-M2Nkp-6z9pcv70Q9wLuUuRwI4IHlwnL8IDCk/edit?tab=t.0)
+
+
+# Structure de dossier
+project_name/                  # Racine du projet
+├── instance/                  # Dossier contenant les fichiers spécifiques à l'environnement local
+│   └── data/                  # Fichier ou base de données SQLite (ou autre)
+├── migrations/                # Gestion des migrations de la base de données
+│   ├── versions/              # Contient les fichiers de migration générés
+│   ├── alembic.ini            # Configuration d'Alembic
+│   └── script.py.mako         # Modèle utilisé par Alembic
+├── models/                    # Définition des modèles SQLAlchemy
+│   ├── __init__.py            # Initialisation des modèles
+│   ├── item.py                # Modèle pour les articles
+│   ├── item_tag.py            # Modèle pour les relations article/étiquette
+│   ├── store.py               # Modèle pour les magasins
+│   ├── tag.py                 # Modèle pour les étiquettes
+│   └── user.py                # Modèle pour les utilisateurs
+├── resources/                 # Gestion des endpoints de l'API REST
+│   ├── __init__.py            # Initialisation du package
+│   ├── item.py                # Endpoints pour les articles
+│   ├── item_tag.py            # Endpoints pour les relations article/étiquette
+│   ├── store.py               # Endpoints pour les magasins
+│   ├── tag.py                 # Endpoints pour les étiquettes
+│   └── user.py                # Endpoints pour les utilisateurs
+├── schemas/                   # Validation et sérialisation des données (Marshmallow)
+│   ├── __init__.py            # Initialisation du package
+│   ├── item.py                # Schéma pour les articles
+│   ├── item_tag.py            # Schéma pour les relations article/étiquette
+│   ├── store.py               # Schéma pour les magasins
+│   ├── tag.py                 # Schéma pour les étiquettes
+│   └── user.py                # Schéma pour les utilisateurs
+├── venv/                      # Environnement virtuel (non inclus dans le dépôt Git)
+├── .env                       # Variables d'environnement (configurations sensibles)
+├── .flaskenv                  # Configuration Flask (par exemple : FLASK_APP, FLASK_ENV)
+├── app.py                     # Point d'entrée principal de l'application
+├── CONTRIBUTING.md            # Guide pour contribuer au projet
+├── db.py                      # Initialisation de la base de données et des migrations
+├── docker-compose.yml         # Configuration Docker Compose
+├── Dockerfile                 # Fichier Docker pour le conteneur principal
+├── README.md                  # Documentation principale du projet
+├── requirements.txt           # Dépendances Python
+
 
 
 
