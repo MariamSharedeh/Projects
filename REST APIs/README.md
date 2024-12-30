@@ -168,10 +168,9 @@ Si tu souhaites contribuer à ce projet, voici comment procéder :
 
 Pour voir un exemple de l'affichage de l'application, vous pouvez consulter ce fichier de démonstration :
 
-[Voir la démonstration sur Google Drive](https://drive.google.com/your-file-link)
+[Voir la démonstration sur Google Drive](https://docs.google.com/document/d/1Xta3Nj-M2Nkp-6z9pcv70Q9wLuUuRwI4IHlwnL8IDCk/edit?tab=t.0)
 
-Vous pouvez aussi consulter des captures d'écran ci-dessous :
-![Capture d'écran de l'application](https://path-to-your-image-file.com)
+
 
 
 
