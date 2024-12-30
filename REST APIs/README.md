@@ -18,6 +18,7 @@ Ce projet démontre la création d'une API RESTful professionnelle avec Flask, F
 - Flask-SQLAlchemy
 - Flask-Smorest
 - Docker
+- Swagger
 
 
 
